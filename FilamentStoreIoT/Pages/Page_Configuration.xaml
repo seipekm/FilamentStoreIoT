@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="FilamentStoreIoT.Pages.Page_Configuration"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FilamentStoreIoT.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+
+    <Grid Background="#BFFF" CornerRadius="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="161*"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" Grid.Column="0" Background="White" CornerRadius="10" Margin="20">
+            
+        </Border>
+        
+        <Border BorderBrush="Black" Grid.Column="1" Background="White" CornerRadius="10" Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="MySQL" FontSize="30" HorizontalAlignment="Center" Margin="3" />
+
+
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="5" CornerRadius="10" VerticalAlignment="Center" Grid.Row="1">
+                        <TextBox Name="Txt_MySQLConnection" FontSize="25" Margin="2" BorderThickness="0" PlaceholderText="Adresse" ToolTipService.ToolTip="MySQL Connection" />
+                    </Border>
+                    
+
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="5" Grid.Column="0" CornerRadius="10" VerticalAlignment="Center" Grid.Row="1">
+                            <TextBox Name="Txt_MySQLUsername" FontSize="25" Margin="2" BorderThickness="0" PlaceholderText="Username" ToolTipService.ToolTip="MySQL Username"/>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="5" Grid.Column="1" CornerRadius="10" VerticalAlignment="Center" Grid.Row="1">
+                            <TextBox Name="Txt_MySQLPassword" FontSize="25" Margin="2" BorderThickness="0" Width="230" PlaceholderText="Password" ToolTipService.ToolTip="MySQL Password"/>
+                        </Border>
+                        
+                        
+                    </Grid>
+
+                    <Border BorderThickness="1" BorderBrush="Black" Margin="5" CornerRadius="10" VerticalAlignment="Center" Grid.Row="3">
+                        <TextBox Name="Txt_MySQL_DB" FontSize="25" Margin="2" BorderThickness="0" PlaceholderText="Database" ToolTipService.ToolTip="MySQL DB"/>
+                    </Border>
+                    
+
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="5" CornerRadius="10" VerticalAlignment="Center" Grid.Column="0" Background="#FF0CFF00">
+                            <Button Content="Speichern" FontSize="25" Margin="1" Width="250" Height="50" HorizontalAlignment="Center" Background="Transparent" />
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="5" CornerRadius="10" VerticalAlignment="Center" Grid.Column="1" Background="#FF00AEFF">
+                            <Button Content="Verbindungstest" FontSize="25" Margin="1" Width="250" Height="50" HorizontalAlignment="Center" Background="Transparent" />
+                        </Border>
+
+                    </Grid>
+
+                    <Border Grid.Row="5" Background="#33555353" CornerRadius="10" Margin="5">
+                        <TextBlock Name="Txt_Message" Text="---" FontSize="25" HorizontalAlignment="Center" >
+                            
+                        </TextBlock>
+                    </Border>
+
+                </Grid>
+            </Grid>
+        </Border>
+
+
+    </Grid>
+</Page>
